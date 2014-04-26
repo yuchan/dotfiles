@@ -53,3 +53,7 @@ function pm() {
 
 
 export DOCKER_HOST=tcp://127.0.0.1:4243
+
+if [ ! -d "~/.vim/bundle" ]; then
+    curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+fi
