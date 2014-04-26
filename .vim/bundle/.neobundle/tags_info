@@ -1,0 +1,11 @@
+ctrlp.vim
+dbext.vim
+neobundle.vim
+neocomplcache
+neosnippet-snippets
+neosnippet.vim
+nerdtree
+vim-colorschemes
+vim-fugitive
+vim-rails
+vimproc
