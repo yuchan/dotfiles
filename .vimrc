@@ -42,7 +42,7 @@ set smartcase
 
 filetype plugin on
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
@@ -81,6 +81,9 @@ filetype plugin indent on     " Required!
 " :NeoBundleList          - list configured bundles
 " :NeoBundleInstall(!)    - install(update) bundles
 " :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+
+" Required:
+call neobundle#end()
 
 " Installation check.
 NeoBundleCheck
