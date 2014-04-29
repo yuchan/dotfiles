@@ -13,19 +13,12 @@
 	 )
        load-path))
 
-(defun set-newline-and-indent ()
-  (local-set-key (kbd "RET") 'newline-and-indent))
-(add-hook 'lisp-mode-hook 'set-newline-and-indent)
-(add-hook 'php-mode-hook 'set-newline-and-indent)
 
 (require 'paredit)
 (autoload 'enable-paredit-mode "paredit"
   "Turn on pseudo-structural editing of Lisp code."
   t)
 
-(require 'auto-complete-config)
-(ac-config-default)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
 
 (require 'php-mode)
 (setq php-mode-force-pear t)
@@ -50,3 +43,12 @@
 (auto-install-compatibility-setup)
 
 (require 'anything-startup)
+
+(require 'auto-complete-config)
+(ac-config-default)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
+
+(defun set-newline-and-indent ()
+  (local-set-key (kbd "RET") 'newline-and-indent))
+(add-hook 'lisp-mode-hook 'set-newline-and-indent)
+(add-hook 'php-mode-hook 'set-newline-and-indent)
