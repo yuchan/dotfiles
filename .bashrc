@@ -6,3 +6,7 @@ if [ `uname` == 'Darwin' ]; then
     ### Added by the Heroku Toolbelt
     export PATH="/usr/local/heroku/bin:$PATH"
 fi
+
+if [ -f ~/.bash_secret ]; then
+    . ~/.bash_secret
+fi
