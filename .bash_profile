@@ -7,6 +7,7 @@ umask 022
 ulimit -c 0
 
 export LANG=ja_JP.UTF-8
+export LC_CTYPE=ja_JP.utf8
 export PAGER=less
 unset LANG
 export PROMPT="%m:%n%% "
