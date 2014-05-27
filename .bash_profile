@@ -18,7 +18,13 @@ export PS1='[\h]\w $ '
 #
 # lsのカラー化
 #
-export LS_COLORS='no=01;37:fi=00:di=01;36:ln=01;32:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=40;32;01:ex=01;33:*core=01;31:'
+#LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35'
+#export LS_COLORS
+# Tell ls to be colourful
+export CLICOLOR=1
+export LSCOLORS=cxfxexdxbxegedabagacad
+# Tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
 alias ls='ls -FG'
 
 export PATH="$HOME/.rbenv/bin:$PATH"

@@ -19,6 +19,8 @@
   "Turn on pseudo-structural editing of Lisp code."
   t)
 
+(require 'js2-mode)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
 (require 'php-mode)
 (setq php-mode-force-pear t)
@@ -52,3 +54,4 @@
   (local-set-key (kbd "RET") 'newline-and-indent))
 (add-hook 'lisp-mode-hook 'set-newline-and-indent)
 (add-hook 'php-mode-hook 'set-newline-and-indent)
+(add-hook 'js-mode-hook 'js2-minor-mode)
