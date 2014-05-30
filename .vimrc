@@ -34,7 +34,7 @@ NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
-
+NeoBundle 'google/maktaba'
 
 " My Bundles here:
 " Refer to |:NeoBundle-examples|.
