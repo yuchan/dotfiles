@@ -9,9 +9,15 @@
       (append
        '("~/.emacs.d/vendor"
 	 "~/.emacs.d/vendor/auto-install"
-	 "~/.emacs.d/custom"
 	 )
        load-path))
+
+(require 'cask "~/.cask/cask.el")
+(cask-initialize)
+
+(require 'server)
+(unless (server-running-p)
+  (server-start))
 
 
 (require 'paredit)
@@ -55,10 +61,3 @@
 (add-hook 'lisp-mode-hook 'set-newline-and-indent)
 (add-hook 'php-mode-hook 'set-newline-and-indent)
 (add-hook 'js-mode-hook 'js2-minor-mode)
-
-(require 'cask "~/.cask/cask.el")
-(cask-initialize)
-
-(require 'server)
-(unless (server-running-p)
-  (server-start))

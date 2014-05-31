@@ -15,7 +15,7 @@ export RPROMPT="[%~]"
 export SPROMPT="correct: %R -> %r ? "
 export PS1='[\h]\w $ '
 export EDITOR="emacsclient -t"
-alias E="emacsclient -t"
+alias e="emacsclient -t"
 alias kill-emacs="emacsclient -e '(kill-emacs)'"
 # lsのカラー化
 #
