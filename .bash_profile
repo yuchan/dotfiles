@@ -26,6 +26,7 @@ export LSCOLORS=cxfxexdxbxegedabagacad
 # Tell grep to highlight matches
 export GREP_OPTIONS='--color=auto'
 alias ls='ls -FG'
+alias grep='grep --color=auto'
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
