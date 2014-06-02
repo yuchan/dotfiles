@@ -59,7 +59,6 @@ function pm() {
   [ -n "$1" ] && perldoc -m $1
 }
 
-
 export DOCKER_HOST=tcp://127.0.0.1:4243
 
 if [ ! -d "${HOME}/.vim/bundle" ]; then
