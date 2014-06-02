@@ -31,6 +31,7 @@
 (depends-on "fuzzy")
 (depends-on "popup")
 (depends-on "color-theme")
+(depends-on "gist")
 
 ;;programming
 (depends-on "markdown-mode")
