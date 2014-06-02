@@ -2,3 +2,4 @@
 .emacs.d/ac-comphist.dat
 *.elc
 .bash_secret
+.cask

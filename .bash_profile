@@ -14,8 +14,9 @@ export PROMPT="%m:%n%% "
 export RPROMPT="[%~]"
 export SPROMPT="correct: %R -> %r ? "
 export PS1='[\h]\w $ '
-
-#
+export EDITOR="emacsclient -t"
+alias e="emacsclient -t"
+alias kill-emacs="emacsclient -e '(kill-emacs)'"
 # lsのカラー化
 #
 #LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35'
@@ -59,10 +60,15 @@ function pm() {
   [ -n "$1" ] && perldoc -m $1
 }
 
-
 export DOCKER_HOST=tcp://127.0.0.1:4243
 
 if [ ! -d "${HOME}/.vim/bundle" ]; then
     echo "install neobundle."
     which git && curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+fi
+
+export PATH="${HOME}/.cask/bin:$PATH"
+
+if [ `ps ax | awk '{print $5 $6}' | grep "emacs" | grep "daemon" | wc -l` != 1 ]; then
+    emacs --daemon 2>/dev/null
 fi
