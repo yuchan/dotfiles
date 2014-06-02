@@ -30,6 +30,7 @@
 (depends-on "paredit")
 (depends-on "fuzzy")
 (depends-on "popup")
+(depends-on "lispxmp")
 (depends-on "color-theme")
 
 ;;programming

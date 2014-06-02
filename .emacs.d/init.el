@@ -61,3 +61,8 @@
 (add-hook 'lisp-mode-hook 'set-newline-and-indent)
 (add-hook 'php-mode-hook 'set-newline-and-indent)
 (add-hook 'js-mode-hook 'js2-minor-mode)
+
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-vim-colors)
+(require 'lispxmp)
