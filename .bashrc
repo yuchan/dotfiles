@@ -5,6 +5,7 @@ if [ `uname` == 'Darwin' ]; then
     export GOPATH=/usr/local/go/bin
     ### Added by the Heroku Toolbelt
     export PATH="/usr/local/heroku/bin:$PATH"
+    alias brew-upgrade-outdated="brew update && brew outdated | awk '{print $1}' | xargs brew upgrade"
 fi
 
 if [ -f ~/.bash_secret ]; then
