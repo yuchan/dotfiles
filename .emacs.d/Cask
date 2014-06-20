@@ -38,3 +38,4 @@
 (depends-on "markdown-mode")
 (depends-on "php-mode")
 (depends-on "js2-mode")
+(depends-on "coffee-mode")
