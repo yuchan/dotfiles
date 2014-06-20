@@ -9,9 +9,15 @@
       (append
        '("~/.emacs.d/vendor"
 	 "~/.emacs.d/vendor/auto-install"
-	 "~/.emacs.d/custom"
 	 )
        load-path))
+
+(require 'cask "~/.cask/cask.el")
+(cask-initialize)
+
+(require 'server)
+(unless (server-running-p)
+  (server-start))
 
 
 (require 'paredit)
@@ -19,6 +25,8 @@
   "Turn on pseudo-structural editing of Lisp code."
   t)
 
+(require 'js2-mode)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
 (require 'php-mode)
 (setq php-mode-force-pear t)
@@ -52,3 +60,11 @@
   (local-set-key (kbd "RET") 'newline-and-indent))
 (add-hook 'lisp-mode-hook 'set-newline-and-indent)
 (add-hook 'php-mode-hook 'set-newline-and-indent)
+(add-hook 'js-mode-hook 'js2-minor-mode)
+
+(require 'gist)
+
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-vim-colors)
+(require 'lispxmp)

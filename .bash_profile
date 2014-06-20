@@ -14,12 +14,20 @@ export PROMPT="%m:%n%% "
 export RPROMPT="[%~]"
 export SPROMPT="correct: %R -> %r ? "
 export PS1='[\h]\w $ '
-
-#
+export EDITOR="emacsclient -t"
+alias e="emacsclient -t"
+alias kill-emacs="emacsclient -e '(kill-emacs)'"
 # lsのカラー化
 #
-export LS_COLORS='no=01;37:fi=00:di=01;36:ln=01;32:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=40;32;01:ex=01;33:*core=01;31:'
+#LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35'
+#export LS_COLORS
+# Tell ls to be colourful
+export CLICOLOR=1
+export LSCOLORS=cxfxexdxbxegedabagacad
+# Tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
 alias ls='ls -FG'
+alias grep='grep --color=auto'
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
@@ -46,7 +54,6 @@ function pm() {
   [ -n "$1" ] && perldoc -m $1
 }
 
-
 export DOCKER_HOST=tcp://127.0.0.1:4243
 
 if [ ! -d "${HOME}/.vim/bundle" ]; then
@@ -60,3 +67,8 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.plenv/bin:$PATH"
 eval "$(plenv init -)"
 
+export PATH="${HOME}/.cask/bin:$PATH"
+
+if [ `ps ax | awk '{print $5 $6}' | grep "emacs" | grep "daemon" | wc -l` != 1 ]; then
+    emacs --daemon 2>/dev/null
+fi
