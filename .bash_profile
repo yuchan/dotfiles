@@ -69,7 +69,7 @@ eval "$(plenv init -)"
 
 export PATH="${HOME}/.cask/bin:$PATH"
 
-which cask || curl -fsSkL https://raw.github.com/cask/cask/master/go | python
+which cask &>/dev/null || curl -fsSkL https://raw.github.com/cask/cask/master/go | python &>/dev/null
 
 if [ `ps ax | awk '{print $5 $6}' | grep "emacs" | grep "daemon" | wc -l` != 1 ]; then
     emacs --daemon 2>/dev/null
