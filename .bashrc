@@ -6,6 +6,8 @@ if [ `uname` == 'Darwin' ]; then
     ### Added by the Heroku Toolbelt
     export PATH="/usr/local/heroku/bin:$PATH"
     alias brew-upgrade-outdated="brew update && brew outdated | awk '{print $1}' | xargs brew upgrade"
+elif [ `uname` == 'Linux' ]; then
+    alias composer="hhvm -v ResourceLimit.SocketDefaultTimeout=30 -v Http.SlowQueryThreshold=30000 /usr/local/bin/composer"
 fi
 
 if [ -f ~/.bash_secret ]; then

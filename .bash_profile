@@ -29,12 +29,6 @@ export GREP_OPTIONS='--color=auto'
 alias ls='ls -FG'
 alias grep='grep --color=auto'
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-export PATH="$HOME/.plenv/bin:$PATH"
-eval "$(plenv init -)"
-
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
@@ -67,8 +61,16 @@ if [ ! -d "${HOME}/.vim/bundle" ]; then
     which git && curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 fi
 
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+export PATH="$HOME/.plenv/bin:$PATH"
+eval "$(plenv init -)"
+
 export PATH="${HOME}/.cask/bin:$PATH"
 export PATH="/Users/Yusuke/.cask/bin:$PATH"
+
+which cask &>/dev/null || curl -fsSkL https://raw.github.com/cask/cask/master/go | python &>/dev/null
 
 if [ `ps ax | awk '{print $5 $6}' | grep "emacs" | grep "daemon" | wc -l` != 1 ]; then
     emacs --daemon 2>/dev/null
