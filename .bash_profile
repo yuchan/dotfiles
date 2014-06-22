@@ -68,7 +68,9 @@ if [ ! -d "${HOME}/.vim/bundle" ]; then
 fi
 
 export PATH="${HOME}/.cask/bin:$PATH"
+export PATH="/Users/Yusuke/.cask/bin:$PATH"
 
 if [ `ps ax | awk '{print $5 $6}' | grep "emacs" | grep "daemon" | wc -l` != 1 ]; then
     emacs --daemon 2>/dev/null
 fi
+export PATH=/usr/texbin:$PATH
