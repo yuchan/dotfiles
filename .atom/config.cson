@@ -1,0 +1,16 @@
+'editor':
+  'fontSize': 14
+  'preferredLineLength': 10000
+'core':
+  'themes': [
+    'atom-dark-ui'
+    'tomorrow-night-bright-syntax'
+  ]
+'exception-reporting':
+  'userId': '98ccc3b9-c52f-12b0-e624-e61a0fe49990'
+'release-notes':
+  'viewedVersion': '0.94.0'
+'welcome':
+  'showOnStartup': false
+'metrics':
+  'userId': '3a5abcdccf1c064424a28a249769bee05a9a0923'

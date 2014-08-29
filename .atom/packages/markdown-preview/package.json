@@ -1,0 +1,36 @@
+{
+  "name": "markdown-preview",
+  "version": "0.100.0",
+  "main": "./lib/main",
+  "description": "Open a rendered version of the Markdown in the current editor with `ctrl-shift-m`.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atom/markdown-preview"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": "*"
+  },
+  "dependencies": {
+    "cheerio": "0.15.0",
+    "fs-plus": "2.x",
+    "pathwatcher": "^2.0",
+    "roaster": "^1.1.2",
+    "temp": "0.6.x",
+    "underscore-plus": "1.x",
+    "wrench": "1.5.x",
+    "highlights": "0.13.0"
+  },
+  "readme": "# Markdown Preview package [![Build Status](https://travis-ci.org/atom/markdown-preview.svg?branch=master)](https://travis-ci.org/atom/markdown-preview)\n\nShow the rendered HTML markdown to the right of the current editor using\n`ctrl-shift-m`\n\nIt can be activated from the editor using the `ctrl-shift-m` key-binding and is\ncurrently enabled for `.markdown`, `.md`, `.mkd`, `.mkdown`, and `.ron` files.\n\n![](https://f.cloud.github.com/assets/671378/2265253/5b1c2ae8-9e7e-11e3-9d93-3fa7caae4710.png)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/atom/markdown-preview/issues"
+  },
+  "homepage": "https://github.com/atom/markdown-preview",
+  "_id": "markdown-preview@0.100.0",
+  "dist": {
+    "shasum": "818eb3b82f053a31e1b568dda16ad108e95e05cb"
+  },
+  "_resolved": "/var/folders/ws/wcrjr8ps40d94yyq13nqhpbc0000gn/T/d-114727-6184-afp6oj/package.tgz",
+  "_from": "/var/folders/ws/wcrjr8ps40d94yyq13nqhpbc0000gn/T/d-114727-6184-afp6oj/package.tgz"
+}

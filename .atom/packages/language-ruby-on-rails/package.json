@@ -1,0 +1,26 @@
+{
+  "name": "language-ruby-on-rails",
+  "version": "0.18.0",
+  "description": "Ruby on Rails language support in Atom",
+  "license": "MIT",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  },
+  "homepage": "http://atom.github.io/language-ruby-on-rails",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atom/language-ruby-on-rails.git"
+  },
+  "bugs": {
+    "url": "https://github.com/atom/language-ruby-on-rails/issues"
+  },
+  "readme": "# Ruby on Rails language support in Atom\n\nAdds syntax highlighting and snippets to Rails files in Atom.\n\nOriginally [converted](http://atom.io/docs/latest/converting-a-text-mate-bundle)\nfrom the [Ruby on Rails TextMate bundle](https://github.com/drnic/ruby-on-rails-tmbundle).\n\nContributions are greatly appreciated. Please fork this repository and open a\npull request to add snippets, make grammar tweaks, etc.\n",
+  "readmeFilename": "README.md",
+  "_id": "language-ruby-on-rails@0.18.0",
+  "dist": {
+    "shasum": "be1b0c4913b3dc4c12e73767e870a8081462e528"
+  },
+  "_resolved": "/var/folders/ws/wcrjr8ps40d94yyq13nqhpbc0000gn/T/d-114725-5967-pnkjx3/package.tgz",
+  "_from": "/var/folders/ws/wcrjr8ps40d94yyq13nqhpbc0000gn/T/d-114725-5967-pnkjx3/package.tgz"
+}
