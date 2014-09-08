@@ -1,6 +1,7 @@
 'editor':
   'fontSize': 14
   'preferredLineLength': 10000
+  'invisibles': {}
 'core':
   'themes': [
     'atom-dark-ui'
