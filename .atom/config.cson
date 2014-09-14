@@ -1,6 +1,7 @@
 'editor':
   'preferredLineLength': 10000
   'fontSize': 15
+  'invisibles': {}
 'core':
   'themes': [
     'atom-dark-ui'
@@ -14,12 +15,9 @@
   'showOnStartup': false
 'metrics':
   'userId': '3a5abcdccf1c064424a28a249769bee05a9a0923'
-<<<<<<< HEAD
 'tree-view':
   'hideIgnoredNames': true
   'hideVcsIgnoredFiles': true
-=======
 'coffee-compile': {}
 'gist-it':
   'userToken': '4fad585f3a36b64b3c4bc986b12547d11e356d7d'
->>>>>>> e58865b48a3fb3cbf479640d42d32472181c2d69
