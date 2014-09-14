@@ -1,6 +1,6 @@
 'editor':
-  'fontSize': 14
   'preferredLineLength': 10000
+  'fontSize': 15
 'core':
   'themes': [
     'atom-dark-ui'
@@ -14,3 +14,6 @@
   'showOnStartup': false
 'metrics':
   'userId': '3a5abcdccf1c064424a28a249769bee05a9a0923'
+'tree-view':
+  'hideIgnoredNames': true
+  'hideVcsIgnoredFiles': true
