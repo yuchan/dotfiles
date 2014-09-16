@@ -1,6 +1,6 @@
 'editor':
-  'fontSize': 14
   'preferredLineLength': 10000
+  'fontSize': 15
   'invisibles': {}
 'core':
   'themes': [
@@ -15,6 +15,9 @@
   'showOnStartup': false
 'metrics':
   'userId': '3a5abcdccf1c064424a28a249769bee05a9a0923'
+'tree-view':
+  'hideIgnoredNames': true
+  'hideVcsIgnoredFiles': true
 'coffee-compile': {}
 'gist-it':
   'userToken': '4fad585f3a36b64b3c4bc986b12547d11e356d7d'
