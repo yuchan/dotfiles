@@ -68,28 +68,9 @@ export PATH="$HOME/.plenv/bin:$PATH"
 eval "$(plenv init -)"
 
 export PATH="${HOME}/.cask/bin:$PATH"
-export PATH="/Users/Yusuke/.cask/bin:$PATH"
 
 which cask &>/dev/null || curl -fsSkL https://raw.github.com/cask/cask/master/go | python &>/dev/null
 
 if [ `ps ax | awk '{print $5 $6}' | grep "emacs" | grep "daemon" | wc -l` != 1 ]; then
     emacs --daemon 2>/dev/null
 fi
-export PATH=/usr/texbin:$PATH
-
-# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/Users/Yusuke/Documents/cocos2d-js-v3.0/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
-
-# Add environment variable NDK_ROOT for cocos2d-x
-export NDK_ROOT=/Users/Yusuke/Documents/android-ndk
-export PATH=$NDK_ROOT:$PATH
-
-# Add environment variable ANDROID_SDK_ROOT for cocos2d-x
-export ANDROID_SDK_ROOT=/Users/Yusuke/Documents/android-sdk
-export PATH=$ANDROID_SDK_ROOT:$PATH
-export PATH=$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
-
-# Add environment variable ANT_ROOT for cocos2d-x
-export ANT_ROOT=/usr/local/bin
-export PATH=$ANT_ROOT:$PATH

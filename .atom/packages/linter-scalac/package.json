@@ -1,0 +1,28 @@
+{
+  "name": "linter-scalac",
+  "linter-package": true,
+  "activationEvents": [],
+  "main": "./lib/init",
+  "version": "0.3.2",
+  "description": "Lint Scala on the fly, using scalac. Also possible to use other Scala linters, such as WartRemover, via compiler options.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AtomLinter/linter-scalac"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.90.0"
+  },
+  "readme": "# linter-scalac\nLint Scala on the fly, using scalac. Also possible to use other Scala linters, such as [WartRemover](https://github.com/typelevel/wartremover), via compiler options (a configurable setting).\n\n## Installation\n[Scala](http://www.scala-lang.org/):\n```bash\n$ brew install scala\n```\n---\n[Atom](https://atom.io/):\n```bash\n$ brew cask install atom\n```\n---\n[linter](https://github.com/AtomLinter/Linter):\n```bash\n$ apm install linter\n```\n---\n[linter-scalac](https://github.com/AtomLinter/linter-scalac):\n```bash\n$ apm install linter-scalac\n```\n---\n\n## Configuration\nVia `config.json`:\n```coffeescript\n'linter-scalac':\n  # Execute `which scala` to determine your own path.\n  # Do not include the scalac file itself, just its parent directory.\n  'scalacExecutablePath': '/usr/local/bin'\n  # Execute `scalac -X` and `scalac -Y` for a handful of useful options.\n  'scalacOptions': '-Xlint -P:wartremover:traverser:org.brianmckenna.wartremover.warts.Unsafe'\n```\n\n> <sub>__Note:__ It is also possible to configure linter-scalac via the GUI: `Atom` > `Preferences` > `linter-scalac`</sub>\n\n## Classpath\nIt is strongly recommended that you utilize a `.classpath` file in the root of your project. While linter-scalac will work without it, you will be given numerous invalid errors and warnings due to the lack of a proper classpath passed to scalac. The `.classpath` file should simply contain the project's full classpath, which is easily generated via SBT:\n\n```bash\n$ sbt 'export fullClasspath'\n```\n\n> <sub>__Notes:__</sub>\n>\n> <sub>1. If your SBT project uses a multi-project setup, you will need a `.classpath` for each subproject.</sub>\n>\n> <sub>2. If your SBT project uses a multi-project setup, you cannot use the project root as the Atom project. You must treat each SBT subproject as its own Atom project.</sub>\n>\n> <sub>3. It is assumed that the first path in `.classpath` is your compiled classes directory (the SBT command above does this automatically). Assuming this is true, it will play nice with SBT. Performing SBT tasks will update linter-scalac compiled files and vice-versa.</sub>\n\n## License\n\n```\nThe MIT License (MIT)\n\nCopyright (c) 2014 Rocky Madden (http://rockymadden.com/)\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n```\n\n## Donation\n[![Share the love!](https://chewbacco-stuff.s3.amazonaws.com/donate.png)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KXUYS4ARNHCN8)\n",
+  "readmeFilename": "readme.md",
+  "bugs": {
+    "url": "https://github.com/AtomLinter/linter-scalac/issues"
+  },
+  "homepage": "https://github.com/AtomLinter/linter-scalac",
+  "_id": "linter-scalac@0.3.2",
+  "dist": {
+    "shasum": "4c38127be3db0973077e442e8872afb260b2c6ae"
+  },
+  "_resolved": "/private/var/folders/t0/yg03x45d2tq_6sjt3b_07m500000gn/T/d-114823-7118-o7t6xt/package.tgz",
+  "_from": "/private/var/folders/t0/yg03x45d2tq_6sjt3b_07m500000gn/T/d-114823-7118-o7t6xt/package.tgz"
+}
