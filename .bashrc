@@ -25,6 +25,8 @@ if [ `uname` == 'Darwin' ]; then
     # Add environment variable ANT_ROOT for cocos2d-x
     export ANT_ROOT=/usr/local/bin
     export PATH=$ANT_ROOT:$PATH
+    # added by travis gem
+    [ -f /Users/yusuke/.travis/travis.sh ] && source /Users/yusuke/.travis/travis.sh
 elif [ `uname` == 'Linux' ]; then
     alias composer="hhvm -v ResourceLimit.SocketDefaultTimeout=30 -v Http.SlowQueryThreshold=30000 /usr/local/bin/composer"
 fi
