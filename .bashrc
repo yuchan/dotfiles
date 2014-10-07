@@ -34,3 +34,5 @@ fi
 if [ -f ~/.bash_secret ]; then
     . ~/.bash_secret
 fi
+
+alias bex="bundle exec"

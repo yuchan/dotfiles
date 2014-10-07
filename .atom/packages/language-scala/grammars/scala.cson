@@ -1,5 +1,6 @@
 'fileTypes': [
-  'scala'
+  'scala',
+  'sbt'
 ]
 'firstLineMatch': '^#!/.*\\b\\w*scala\\b'
 'foldingStartMarker': '/\\*\\*|\\{\\s*$'
@@ -421,7 +422,7 @@
     'beginCaptures':
       '1':
         'name': 'keyword.other.import.scala'
-    'end': '(?<=[\\n;])'
+    'end': '([\\n;]+)'
     'name': 'meta.import.scala'
     'patterns': [
       {

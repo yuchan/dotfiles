@@ -1,11 +1,14 @@
 'editor':
-  'preferredLineLength': 10000
   'fontSize': 15
+  'softWrapAtPreferredLineLength': true
   'invisibles': {}
 'core':
   'themes': [
     'atom-dark-ui'
     'tomorrow-night-bright-syntax'
+  ]
+  'disabledPackages': [
+    'atom-lint'
   ]
 'exception-reporting':
   'userId': '98ccc3b9-c52f-12b0-e624-e61a0fe49990'
@@ -18,7 +21,6 @@
 'tree-view':
   'hideIgnoredNames': true
   'hideVcsIgnoredFiles': true
-'coffee-compile': {}
 'gist-it':
   'userToken': '4fad585f3a36b64b3c4bc986b12547d11e356d7d'
 'atom-lint':
