@@ -3,3 +3,5 @@
 *.elc
 .bash_secret
 .cask
+.atom/atom-shell
+
