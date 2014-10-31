@@ -15,8 +15,11 @@ Preview and/or save compiled Javascript in Atom
 ## TODO
 - Recompile on change option
 - Open compiled JS in pane if `compile on save` option is enabled
+- Add sourcemap support
 
 ## Changelog
+- 2014-10-27   v0.8.4   Reenabled focusing on editor. Cleaned up package.
+- 2014-10-22   v0.8.3   Fixed preview not working due to API changes
 - 2014-09-16   v0.8.2   Added check to make sure user is compiling and saving Coffeescript
 - 2014-09-16   v0.8.1   Fixed not able to compile and save when opening a preview pane
 - 2014-09-16   v0.8.0   Added `compile on save without preview` feature (disabled by default)

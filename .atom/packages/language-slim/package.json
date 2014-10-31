@@ -1,6 +1,6 @@
 {
   "name": "language-slim",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "Slim language package for Atom.",
   "repository": {
@@ -18,10 +18,10 @@
     "url": "https://github.com/slim-template/language-slim/issues"
   },
   "homepage": "https://github.com/slim-template/language-slim",
-  "_id": "language-slim@0.2.0",
+  "_id": "language-slim@0.3.0",
   "dist": {
-    "shasum": "d3a05011c26260d8f0b1c9e8792813b62c660438"
+    "shasum": "a71a7ee97e35bb21c412c82143e700d23a9a1453"
   },
-  "_resolved": "/private/var/folders/t0/yg03x45d2tq_6sjt3b_07m500000gn/T/d-114823-9500-weqry/package.tgz",
-  "_from": "/private/var/folders/t0/yg03x45d2tq_6sjt3b_07m500000gn/T/d-114823-9500-weqry/package.tgz"
+  "_resolved": "/private/var/folders/ws/wcrjr8ps40d94yyq13nqhpbc0000gn/T/d-114917-15364-7tf0dp/package.tgz",
+  "_from": "/private/var/folders/ws/wcrjr8ps40d94yyq13nqhpbc0000gn/T/d-114917-15364-7tf0dp/package.tgz"
 }

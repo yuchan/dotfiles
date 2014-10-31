@@ -13,9 +13,13 @@ describe "MarkdownPreviewView", ->
 
     filePath = atom.project.resolve('subdir/file.markdown')
     preview = new MarkdownPreviewView({filePath})
+    preview.attachToDom()
 
     waitsForPromise ->
       atom.packages.activatePackage('language-ruby')
+
+    waitsForPromise ->
+      atom.packages.activatePackage('markdown-preview')
 
   afterEach ->
     preview.destroy()
@@ -43,6 +47,7 @@ describe "MarkdownPreviewView", ->
 
     it "recreates the file when serialized/deserialized", ->
       newPreview = atom.deserializers.deserialize(preview.serialize())
+      newPreview.attachToDom()
       expect(newPreview.getPath()).toBe preview.getPath()
 
     it "serializes the editor id when opened for an editor", ->
@@ -53,9 +58,11 @@ describe "MarkdownPreviewView", ->
 
       runs ->
         preview = new MarkdownPreviewView({editorId: atom.workspace.getActiveEditor().id})
+        preview.attachToDom()
         expect(preview.getPath()).toBe atom.workspace.getActiveEditor().getPath()
 
         newPreview = atom.deserializers.deserialize(preview.serialize())
+        newPreview.attachToDom()
         expect(newPreview.getPath()).toBe preview.getPath()
 
   describe "code block tokenization", ->
@@ -93,9 +100,9 @@ describe "MarkdownPreviewView", ->
         expect(image.attr('src')).toBe atom.project.resolve('subdir/image1.png')
 
     describe "when the image uses an absolute path", ->
-      it "doesn't change the path", ->
+      it "resolves to a path relative to the project root", ->
         image = preview.find("img[alt=Image2]")
-        expect(image.attr('src')).toBe path.normalize(path.resolve('/tmp/image2.png'))
+        expect(image.attr('src')).toBe atom.project.resolve('tmp/image2.png')
 
     describe "when the image uses a web URL", ->
       it "doesn't change the URL", ->
@@ -128,6 +135,7 @@ describe "MarkdownPreviewView", ->
       preview.destroy()
       filePath = atom.project.resolve('subdir/simple.md')
       preview = new MarkdownPreviewView({filePath})
+      preview.attachToDom()
 
     it "saves the rendered HTML and opens it", ->
       outputPath = temp.path(suffix: '.html')
@@ -157,6 +165,7 @@ describe "MarkdownPreviewView", ->
       preview.destroy()
       filePath = atom.project.resolve('subdir/simple.md')
       preview = new MarkdownPreviewView({filePath})
+      preview.attachToDom()
 
     it "writes the rendered HTML to the clipboard", ->
       waitsForPromise ->

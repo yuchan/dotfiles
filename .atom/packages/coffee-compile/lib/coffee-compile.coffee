@@ -2,19 +2,30 @@ url         = require 'url'
 querystring = require 'querystring'
 
 CoffeeCompileView = require './coffee-compile-view'
+util              = require './util'
 
 module.exports =
-  configDefaults:
-    grammars: [
-      'source.coffee'
-      'source.litcoffee'
-      'text.plain'
-      'text.plain.null-grammar'
-    ]
-    noTopLevelFunctionWrapper: true
-    compileOnSave: false
-    compileOnSaveWithoutPreview: false
-    focusEditorAfterCompile: false
+  config:
+    grammars:
+      type: 'array'
+      default: [
+        'source.coffee'
+        'source.litcoffee'
+        'text.plain'
+        'text.plain.null-grammar'
+      ]
+    noTopLevelFunctionWrapper:
+      type: 'boolean'
+      default: true
+    compileOnSave:
+      type: 'boolean'
+      default: false
+    compileOnSaveWithoutPreview:
+      type: 'boolean'
+      default: false
+    focusEditorAfterCompile:
+      type: 'boolean'
+      default: false
 
   activate: ->
     atom.workspaceView.command 'coffee-compile:compile', => @display()
@@ -22,8 +33,8 @@ module.exports =
     if atom.config.get('coffee-compile.compileOnSaveWithoutPreview')
       atom.workspaceView.command 'core:save', => @save()
 
-    atom.workspace.registerOpener (uriToOpen) ->
-      {protocol, host, pathname} = url.parse uriToOpen
+    atom.workspace.addOpener (uriToOpen) ->
+      {protocol, pathname} = url.parse uriToOpen
       pathname = querystring.unescape(pathname) if pathname
 
       return unless protocol is 'coffeecompile:'
@@ -42,7 +53,7 @@ module.exports =
 
     return unless @checkGrammar editor
 
-    CoffeeCompileView.saveCompiled editor
+    util.compileToFile editor
 
   display: ->
     editor     = atom.workspace.getActiveEditor()
@@ -53,23 +64,18 @@ module.exports =
     unless @checkGrammar editor
       return console.warn("Cannot compile non-Coffeescript to Javascript")
 
-    grammars = atom.config.get('coffee-compile.grammars') or []
-    unless (grammar = editor.getGrammar().scopeName) in grammars
-      console.warn("Cannot compile non-Coffeescript to Javascript")
-      return
-
-    uri = "coffeecompile://editor/#{editor.id}"
-
-    atom.workspace.open uri,
+    atom.workspace.open "coffeecompile://editor/#{editor.id}",
       searchAllPanes: true
       split: "right"
-    .done (coffeeCompileView) ->
-      if coffeeCompileView instanceof CoffeeCompileView
-        coffeeCompileView.renderCompiled()
+    .then (view) ->
+      uriToOpen = view.getUri()
 
-        if atom.config.get('coffee-compile.compileOnSave') or
-            atom.config.get('coffee-compile.compileOnSaveWithoutPreview')
-          CoffeeCompileView.saveCompiled editor
+      return unless uriToOpen
 
-        if atom.config.get('coffee-compile.focusEditorAfterCompile')
-          activePane.activate()
+      {protocol, pathname} = url.parse uriToOpen
+      pathname = querystring.unescape(pathname) if pathname
+
+      return unless protocol is 'coffeecompile:'
+
+      if atom.config.get('coffee-compile.focusEditorAfterCompile')
+        activePane.activate()
