@@ -8,7 +8,7 @@
   'core':
     'themes': [
       'atom-dark-ui'
-      'tomorrow-night-bright-syntax'
+      'base16-tomorrow-dark-theme'
     ]
   'exception-reporting':
     'userId': '98ccc3b9-c52f-12b0-e624-e61a0fe49990'

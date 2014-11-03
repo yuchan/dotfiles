@@ -4,4 +4,6 @@
 .bash_secret
 .cask
 .atom/atom-shell
+.atom/compile-cache
+.atom/storage
 

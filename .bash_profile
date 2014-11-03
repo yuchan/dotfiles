@@ -14,7 +14,7 @@ export PROMPT="%m:%n%% "
 export RPROMPT="[%~]"
 export SPROMPT="correct: %R -> %r ? "
 export PS1='[\h]\w $ '
-export EDITOR="emacsclient -t"
+export EDITOR="vi"
 alias e="emacsclient -t"
 alias kill-emacs="emacsclient -e '(kill-emacs)'"
 # lsのカラー化
@@ -53,8 +53,6 @@ function pv() {
 function pm() {
   [ -n "$1" ] && perldoc -m $1
 }
-
-export DOCKER_HOST=tcp://127.0.0.1:4243
 
 if [ ! -d "${HOME}/.vim/bundle" ]; then
     echo "install neobundle."

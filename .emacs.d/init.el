@@ -67,3 +67,6 @@
 (require 'color-theme)
 (color-theme-initialize)
 (require 'lispxmp)
+
+(require 'rails-autoload)
+
