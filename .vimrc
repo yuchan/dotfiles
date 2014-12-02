@@ -36,6 +36,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'google/maktaba'
 NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'tpope/vim-haml'
 
 " My Bundles here:
 " Refer to |:NeoBundle-examples|.
