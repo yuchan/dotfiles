@@ -7,6 +7,8 @@ roaster = null # Defer until used
 {scopeForFenceName} = require './extension-helper'
 
 highlighter = null
+{resourcePath} = atom.getLoadSettings()
+packagePath = path.dirname(__dirname)
 
 exports.toHtml = (text='', filePath, grammar, callback) ->
   roaster ?= require 'roaster'
@@ -70,10 +72,14 @@ sanitize = (html) ->
 
 resolveImagePaths = (html, filePath) ->
   html = $(html)
-  for imgElement in html.find("img")
+  for imgElement in html.find('img')
     img = $(imgElement)
     if src = img.attr('src')
-      continue if src.match /^(https?:\/\/)/
+      continue if src.match(/^(https?|atom):\/\//)
+      continue if src.startsWith(process.resourcesPath)
+      continue if src.startsWith(resourcePath)
+      continue if src.startsWith(packagePath)
+
       if src[0] is '/'
         img.attr('src', atom.project.resolve(src.substring(1)))
       else

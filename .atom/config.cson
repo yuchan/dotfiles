@@ -4,6 +4,7 @@
     'showInvisibles': true
     'softWrap': true
     'softWrapAtPreferredLineLength': true
+    'preferredLineLength': 240
     'invisibles': {}
   'core':
     'themes': [

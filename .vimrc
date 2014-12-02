@@ -29,12 +29,13 @@ NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
 NeoBundle 'tpope/vim-rails', { 'autoload' : {
             \ 'filetypes' : ['haml', 'ruby', 'eruby'] }}
-
+NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'google/maktaba'
+NeoBundle 'scrooloose/nerdcommenter'
 
 " My Bundles here:
 " Refer to |:NeoBundle-examples|.
