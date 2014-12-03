@@ -2,5 +2,4 @@ atom-lint@0.20.0
 coffee-compile@0.8.4
 language-latex@0.4.1
 language-slim@0.3.0
-markdown-preview@0.110.0
 

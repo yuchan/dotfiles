@@ -9,3 +9,4 @@
 .node-gyp
 .atom/.npm
 .atom/packages
+npm-debug.log
