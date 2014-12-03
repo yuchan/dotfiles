@@ -4,7 +4,6 @@
     'showInvisibles': true
     'softWrap': true
     'softWrapAtPreferredLineLength': true
-    'preferredLineLength': 240
     'invisibles': {}
   'core':
     'themes': [
@@ -22,11 +21,3 @@
   'tree-view':
     'hideIgnoredNames': true
     'hideVcsIgnoredFiles': true
-  'gist-it':
-    'userToken': '4fad585f3a36b64b3c4bc986b12547d11e356d7d'
-  'atom-lint':
-    'flake8':
-      'path': '/Users/yusuke/.pyenv/shims/flake8'
-    'rubocop':
-      'path': '/Users/yusuke/.rbenv/shims/rubocop'
-    'showViolationMetadata': false
