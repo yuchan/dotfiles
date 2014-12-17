@@ -1,5 +1,7 @@
 atom-lint@0.20.0
 coffee-compile@0.8.4
+language-haml@0.14.0
 language-latex@0.4.1
 language-slim@0.3.0
+travis-ci-status@0.11.0
 

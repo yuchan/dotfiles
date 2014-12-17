@@ -4,6 +4,7 @@
     'showInvisibles': true
     'softWrap': true
     'softWrapAtPreferredLineLength': true
+    'invisibles': {}
   'core':
     'themes': [
       'atom-dark-ui'
