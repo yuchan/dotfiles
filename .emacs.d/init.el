@@ -70,3 +70,7 @@
 
 (require 'rails-autoload)
 
+(require 'server)
+(unless (server-running-p)
+  (server-start))
+

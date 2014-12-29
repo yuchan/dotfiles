@@ -1,2 +1,3 @@
 TM_RUBY = "$HOME/.rbenv/shims/ruby"
+TM_RUBOCOP="$HOME/.rbenv/shims/rubocop"
 PATH = "$HOME/.rbenv/bin:$PATH"

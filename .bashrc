@@ -10,8 +10,16 @@ if [ `uname` == 'Darwin' ]; then
     export PATH=/usr/texbin:$PATH
 
     # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-    export COCOS_CONSOLE_ROOT=$HOME/Documents/cocos2d-js-v3.0/tools/cocos2d-console/bin
+    export COCOS_CONSOLE_ROOT=/Users/Yusuke/Documents/cocos2d-js-v3.2-rc0/tools/cocos2d-console/bin
     export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
+    # Add environment variable COCOS_X_ROOT for cocos2d-x
+    export COCOS_X_ROOT=/Users/Yusuke/Documents/cocos2d-x-3.3
+    export PATH=$COCOS_X_ROOT:$PATH
+
+    # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
+    export COCOS_TEMPLATES_ROOT=/Users/Yusuke/Documents/cocos2d-x-3.3/templates
+    export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
     # Add environment variable NDK_ROOT for cocos2d-x
     export NDK_ROOT=$HOME/Documents/android-ndk
