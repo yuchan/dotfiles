@@ -1,10 +1,2 @@
-.vim/bundle
-*.elc
 .bash_secret
-.atom/atom-shell
-.atom/compile-cache
-.atom/storage
-.node-gyp
-.atom/.npm
-.atom/packages
 npm-debug.log
