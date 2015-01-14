@@ -37,6 +37,7 @@ NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'google/maktaba'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'ngmy/vim-rubocop'
 
 " My Bundles here:
 " Refer to |:NeoBundle-examples|.
@@ -79,7 +80,8 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-" let vim recognize coffee
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+" vimにcoffeeファイルタイプを認識させる
 au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 " set indent level 
 autocmd FileType coffee     setlocal sw=2 sts=2 ts=2 et
@@ -97,6 +99,7 @@ set nobackup
 set incsearch
 set ignorecase
 set smartcase
+set autochdir
 
 filetype plugin on
 colorscheme Tomorrow-Night-Bright 
