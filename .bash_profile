@@ -15,8 +15,6 @@ export RPROMPT="[%~]"
 export SPROMPT="correct: %R -> %r ? "
 export PS1='[\h]\w $ '
 export EDITOR="vi"
-alias e="emacsclient -t"
-alias kill-emacs="emacsclient -e '(kill-emacs)'"
 # lsのカラー化
 #
 #LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35'
@@ -65,6 +63,3 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.plenv/bin:$PATH"
 eval "$(plenv init -)"
 
-export PATH="${HOME}/.cask/bin:$PATH"
-
-which cask &>/dev/null || curl -fsSkL https://raw.github.com/cask/cask/master/go | python &>/dev/null

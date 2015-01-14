@@ -1,8 +1,6 @@
 .vim/bundle
-.emacs.d/ac-comphist.dat
 *.elc
 .bash_secret
-.cask
 .atom/atom-shell
 .atom/compile-cache
 .atom/storage
