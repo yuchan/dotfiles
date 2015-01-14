@@ -58,8 +58,6 @@ call neobundle#end()
 " Installation check.
 NeoBundleCheck
 
-set title
-
 if &term =~ "xterm-256color"
     set t_Co=256
     syntax on
@@ -81,12 +79,13 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-" vimにcoffeeファイルタイプを認識させる
+" let vim recognize coffee
 au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
-" インデントを設定
+" set indent level 
 autocmd FileType coffee     setlocal sw=2 sts=2 ts=2 et
 
+set title
+set autochdir
 set number
 set tabstop=4
 set shiftwidth=4
@@ -95,12 +94,14 @@ set laststatus=2
 set expandtab
 set showcmd
 set nobackup
-
 set incsearch
 set ignorecase
 set smartcase
 
 filetype plugin on
-
 colorscheme Tomorrow-Night-Bright 
 
+augroup reload_vimrc " {
+    autocmd!
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END " }
