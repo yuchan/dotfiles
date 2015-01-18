@@ -1,7 +1,7 @@
-if [ `uname` == 'Darwin' ]; then
+if [[ `uname` == 'Darwin' ]]; then
     export EDITOR="/usr/bin/vim"
     export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/local/bin:$PATH
-    export PATH=$HOME/bin:$HOME/local/bin:$HOME/local/*/bin:$PATH
+    export PATH=$HOME/bin:$PATH
     export GOPATH=/usr/local/go/bin
     ### Added by the Heroku Toolbelt
     export PATH="/usr/local/heroku/bin:$PATH"
@@ -39,11 +39,11 @@ if [ `uname` == 'Darwin' ]; then
     export DOCKER_HOST=tcp://192.168.59.103:2376
     export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
     export DOCKER_TLS_VERIFY=1
-elif [ `uname` == 'Linux' ]; then
+elif [[ `uname` == 'Linux' ]]; then
     alias composer="hhvm -v ResourceLimit.SocketDefaultTimeout=30 -v Http.SlowQueryThreshold=30000 /usr/local/bin/composer"
 fi
 
-if [ -f ~/.bash_secret ]; then
+if [[ -f ~/.bash_secret ]]; then
     . ~/.bash_secret
 fi
 

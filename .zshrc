@@ -48,8 +48,74 @@ ZSH_THEME="philips"
 plugins=(git)
 
 # User configuration
+if [ -f ~/.bashrc ] ; then
+    . ~/.bashrc
+fi
 
-export PATH="/Users/yusuke/.plenv/shims:/Users/yusuke/.plenv/bin:/Users/yusuke/.rbenv/shims:/Users/yusuke/.rbenv/bin:/Users/yusuke/.nvm/v0.10.33/bin:/Users/yusuke/.pyenv/shims:/Users/yusuke/.pyenv/bin:/Applications/Postgres.app/Contents/Versions/9.3/bin:/usr/local/bin:/Users/yusuke/Documents/android-sdk/tools:/Users/yusuke/Documents/android-sdk/platform-tools:/Users/yusuke/Documents/android-sdk:/Users/yusuke/Documents/android-ndk:/Users/Yusuke/Documents/cocos2d-x-3.3/templates:/Users/Yusuke/Documents/cocos2d-x-3.3:/Users/Yusuke/Documents/cocos2d-js-v3.2-rc0/tools/cocos2d-console/bin:/usr/texbin:/usr/local/heroku/bin:/Users/yusuke/bin:/Users/yusuke/local/bin:/Users/yusuke/local/*/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/yusuke/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin:/Applications/Postgres.app/Contents/Versions/9.3/bin"
+umask 022
+
+ulimit -c 0
+
+export LANG=ja_JP.UTF-8
+export LC_CTYPE=ja_JP.UTF-8
+export LC_ALL=ja_JP.UTF-8
+export PAGER=less
+export PROMPT="%m:%n%% "
+export RPROMPT="[%~]"
+export SPROMPT="correct: %R -> %r ? "
+export PS1='[\h]\w $ '
+export EDITOR="vi"
+# lsのカラー化
+#
+#LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35'
+#export LS_COLORS
+# Tell ls to be colourful
+export CLICOLOR=1
+export LSCOLORS=cxfxexdxbxegedabagacad
+# Tell grep to highlight matches
+export GREP_OPTIONS='--color=auto'
+alias ls='ls -FG'
+alias grep='grep --color=auto'
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+. $HOME/.nvm/nvm.sh
+
+if [[ $SHELL = '/bin/bash' ]];then
+    shopt -u sourcepath
+
+    complete -d cd
+    complete -c man
+    complete -C perldoc-complete -o nospace -o default perldoc
+fi
+
+if [ $TERM == xterm ]
+then
+    export TERM=xterm-color
+fi
+
+function pv() {
+    [ -n "$1" ] && perl -e "use $1;print qq|$1: \$$1::VERSION\n|;";
+}
+
+function pm() {
+  [ -n "$1" ] && perldoc -m $1
+}
+
+if [ ! -d "${HOME}/.vim/bundle" ]; then
+    echo "install neobundle."
+    which git && curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+fi
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+export PATH="$HOME/.plenv/bin:$PATH"
+eval "$(plenv init -)"
+
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -78,7 +144,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-if [[ -n ~/.bash_secret ]]; then
-    source ~/.bash_secret
-fi
+#

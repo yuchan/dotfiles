@@ -33,11 +33,13 @@ eval "$(pyenv init -)"
 
 . $HOME/.nvm/nvm.sh
 
-shopt -u sourcepath
+if [[ $SHELL = '/bin/bash' ]];then
+    shopt -u sourcepath
 
-complete -d cd
-complete -c man
-complete -C perldoc-complete -o nospace -o default perldoc
+    complete -d cd
+    complete -c man
+    complete -C perldoc-complete -o nospace -o default perldoc
+fi
 
 if [ $TERM == xterm ]
 then
