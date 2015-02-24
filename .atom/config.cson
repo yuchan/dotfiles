@@ -20,3 +20,4 @@
     userId: "3a5abcdccf1c064424a28a249769bee05a9a0923"
   "tree-view":
     hideIgnoredNames: true
+  "atom-lint": {}

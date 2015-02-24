@@ -2,6 +2,7 @@ if has('vim_starting')
     set nocompatible               " Be iMproved
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
+set runtimepath+=$GOROOT/misc/vim
 
 call neobundle#begin(expand('~/.vim/bundle'))
 " Let NeoBundle manage NeoBundle
@@ -86,6 +87,11 @@ au BufRead,BufNewFile,BufReadPre *.coffee   set filetype=coffee
 " set indent level 
 autocmd FileType coffee     setlocal sw=2 sts=2 ts=2 et
 
+" Go
+exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
+set completeopt=menu,preview
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
+
 set title
 set autochdir
 set number
@@ -108,3 +114,5 @@ augroup reload_vimrc " {
     autocmd!
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
+
+
