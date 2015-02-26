@@ -6,6 +6,9 @@
     softWrapAtPreferredLineLength: true
     invisibles: {}
   core:
+    disabledPackages: [
+      "atom-lint"
+    ]
     themes: [
       "atom-dark-ui"
       "base16-tomorrow-dark-theme"
@@ -21,3 +24,5 @@
   "tree-view":
     hideIgnoredNames: true
   "atom-lint": {}
+  "vim-mode":
+    useSmartcaseForSearch: true

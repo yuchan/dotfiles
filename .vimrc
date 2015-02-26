@@ -39,6 +39,7 @@ NeoBundle 'google/maktaba'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'ngmy/vim-rubocop'
+NeoBundle 'hsanson/vim-android'
 
 " My Bundles here:
 " Refer to |:NeoBundle-examples|.
