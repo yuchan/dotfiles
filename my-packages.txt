@@ -1,8 +1,9 @@
+atom-jshint@1.5.0
 atom-lint@0.20.1
-coffee-compile@0.8.4
+coffee-compile@0.10.0
 language-haml@0.15.0
 language-latex@0.4.1
 language-slim@0.3.0
-travis-ci-status@0.11.1
-vim-mode@0.29.0
+travis-ci-status@0.11.2
+vim-mode@0.34.0
 
