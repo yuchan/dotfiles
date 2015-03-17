@@ -26,3 +26,6 @@
   "atom-lint": {}
   "vim-mode":
     useSmartcaseForSearch: true
+  linter: {}
+  minimap: {}
+  "linter-jshint": {}
