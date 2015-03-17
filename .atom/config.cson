@@ -29,3 +29,5 @@
   linter: {}
   minimap: {}
   "linter-jshint": {}
+  "linter-rubocop":
+    rubocopExecutablePath: "/Users/yusuke/.rbenv/versions/2.2.0/bin/rubocop"
