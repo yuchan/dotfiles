@@ -1,6 +1,6 @@
 "*":
   editor:
-    fontSize: 15
+    fontSize: 14
     showInvisibles: true
     softWrap: true
     softWrapAtPreferredLineLength: true
@@ -31,3 +31,4 @@
   "linter-jshint": {}
   "linter-rubocop":
     rubocopExecutablePath: "/Users/yusuke/.rbenv/versions/2.2.0/bin/rubocop"
+  "gist-it": {}
