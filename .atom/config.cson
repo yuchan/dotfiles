@@ -1,11 +1,9 @@
 "*":
   editor:
-    fontSize: 14
     showInvisibles: true
     softWrap: true
     softWrapAtPreferredLineLength: true
-    invisibles:
-      {}
+    invisibles: {}
   core:
     disabledPackages: [
       "atom-lint"
@@ -24,19 +22,17 @@
     userId: "3a5abcdccf1c064424a28a249769bee05a9a0923"
   "tree-view":
     hideIgnoredNames: true
-  "atom-lint":
-    {}
+  "atom-lint": {}
   "vim-mode":
     useSmartcaseForSearch: true
   linter:
-    {}
-  minimap:
-    {}
-  "linter-jshint":
-    {}
+    ignoredLinterErrors: [
+      "rubocop"
+    ]
+  minimap: {}
+  "linter-jshint": {}
   "linter-rubocop":
     rubocopExecutablePath: "/Users/yusuke/.rbenv/versions/2.2.2/bin/rubocop"
-  "gist-it":
-    {}
+  "gist-it": {}
   "atom-beautify":
     _analyticsUserId: "e320c6dd-ea79-4cb4-87b3-ebe624d7aeac"
