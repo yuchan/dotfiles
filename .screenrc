@@ -1,0 +1,9 @@
+escape ^Tt
+
+shell -${SHELL}
+caption always "%3n %t%? @%u%?%? [%h]%?%=%c"
+defscrullback 1024
+startup_message off
+hardstatus on
+hardstatus alwayslastline
+
