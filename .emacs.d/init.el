@@ -34,6 +34,7 @@
     rake
     f
     s
+    auto-complete
     inf-ruby
     inflections
     projectile

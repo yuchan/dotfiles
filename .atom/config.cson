@@ -38,3 +38,4 @@
     _analyticsUserId: "e320c6dd-ea79-4cb4-87b3-ebe624d7aeac"
   "autocomplete-elixir":
     elixirPath: "/usr/local/bin/elixir"
+  react: {}
