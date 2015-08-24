@@ -109,12 +109,8 @@ if [ ! -d "${HOME}/.vim/bundle" ]; then
     which git && curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 fi
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 export PATH="$HOME/.plenv/bin:$PATH"
 eval "$(plenv init -)"
-
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -155,3 +151,5 @@ export PATH=$COCOS_CONSOLE_ROOT:$PATH
 # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
 export COCOS_TEMPLATES_ROOT=/Users/Yusuke/Documents/cocos2d-x-3.7.1/templates
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
