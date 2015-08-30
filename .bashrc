@@ -1,15 +1,16 @@
 if [[ `uname` == 'Darwin' ]]; then
     export EDITOR="/usr/bin/vim"
-    export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/local/bin:$PATH
-    export PATH=$HOME/bin:$PATH
-    ### Added by the Heroku Toolbelt
-    export PATH="/usr/local/heroku/bin:$PATH"
+    export PATH=/usr/local/heroku/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/local/bin:$PATH
     export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
     alias brew-upgrade-outdated="brew update && brew outdated | awk '{print $1}' | xargs brew upgrade"
     export PATH=/usr/texbin:$PATH
     eval "$(docker-machine env default)"
     # added by travis gem
     [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+
+    export GOROOT=/usr/local/go
+    export GOPATH=$HOME/work/goworkspace
+    export PATH=$GOPATH/bin:$PATH
 elif [[ `uname` == 'Linux' ]]; then
     alias composer="hhvm -v ResourceLimit.SocketDefaultTimeout=30 -v Http.SlowQueryThreshold=30000 /usr/local/bin/composer"
 fi
