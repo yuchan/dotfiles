@@ -1,7 +1,7 @@
 if [[ `uname` == 'Darwin' ]]; then
     export EDITOR="/usr/bin/vim"
     export PATH=/usr/local/heroku/bin:$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:$HOME/local/bin:$PATH
-    export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin
+    export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
     alias brew-upgrade-outdated="brew update && brew outdated | awk '{print $1}' | xargs brew upgrade"
     export PATH=/usr/texbin:$PATH
     eval "$(docker-machine env default)"
