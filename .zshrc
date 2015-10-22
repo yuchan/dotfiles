@@ -150,3 +150,5 @@ export PATH=$COCOS_CONSOLE_ROOT:$PATH
 export COCOS_TEMPLATES_ROOT=/Users/Yusuke/Documents/cocos2d-x-3.7.1/templates
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

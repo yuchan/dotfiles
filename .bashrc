@@ -23,4 +23,5 @@ alias bex="bundle exec"
 alias emacs="emacsclient -nw --a ''"
 alias killmacs="emacsclient -e '(kill-emacs)'"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$HOME/.rvm/bin:$PATH" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
