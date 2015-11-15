@@ -1,0 +1,4 @@
+setenv('GNUTERM','qt')    # Default graphics terminal with Octave GUI
+setenv('GNUTERM','x11')   # Requires XQuartz; install gnuplot --with-x
+setenv('GNUTERM','wxt')   # wxWidgets/pango; install gnuplot --wx
+setenv('GNUTERM','aqua')  # Requires AquaTerm; install gnuplot --with-aquaterm
