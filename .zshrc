@@ -49,7 +49,7 @@ plugins=(git)
 
 # User configuration
 if [ -f ~/.bashrc ] ; then
-    . ~/.bashrc
+	. ~/.bashrc
 fi
 
 umask 022
@@ -84,29 +84,29 @@ eval "$(pyenv init -)"
 . $HOME/.nvm/nvm.sh
 
 if [[ $SHELL = '/bin/bash' ]];then
-    shopt -u sourcepath
+	shopt -u sourcepath
 
-    complete -d cd
-    complete -c man
-    complete -C perldoc-complete -o nospace -o default perldoc
+	complete -d cd
+	complete -c man
+	complete -C perldoc-complete -o nospace -o default perldoc
 fi
 
 if [ $TERM == xterm ]
 then
-    export TERM=xterm-color
+	export TERM=xterm-color
 fi
 
 function pv() {
-    [ -n "$1" ] && perl -e "use $1;print qq|$1: \$$1::VERSION\n|;";
+	[ -n "$1" ] && perl -e "use $1;print qq|$1: \$$1::VERSION\n|;";
 }
 
 function pm() {
-  [ -n "$1" ] && perldoc -m $1
+	[ -n "$1" ] && perldoc -m $1
 }
 
 if [ ! -d "${HOME}/.vim/bundle" ]; then
-    echo "install neobundle."
-    which git && curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+	echo "install neobundle."
+	which git && curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 fi
 
 export PATH="$HOME/.plenv/bin:$PATH"
@@ -152,3 +152,21 @@ export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+
+function powerline_precmd() {
+	PS1="$($HOME/dotfiles/powerline-shell/powerline-shell.py $? --shell zsh 2> /dev/null)"
+}
+
+function install_powerline_precmd() {
+	for s in "${precmd_functions[@]}"; do
+		if [ "$s" = "powerline_precmd" ]; then
+			return
+		fi
+	done
+	precmd_functions+=(powerline_precmd)
+}
+
+if [ "$TERM" != "linux" ]; then
+	install_powerline_precmd
+fi
