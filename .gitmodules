@@ -5,3 +5,6 @@
 [submodule "powerline-shell"]
 	path = powerline-shell
 	url = https://github.com/milkbikis/powerline-shell.git
+[submodule "fonts"]
+	path = fonts
+	url = https://github.com/powerline/fonts.git
