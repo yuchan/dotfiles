@@ -109,7 +109,7 @@ set smartcase
 set autochdir
 
 filetype plugin on
-colorscheme Tomorrow-Night-Bright 
+" colorscheme Tomorrow-Night-Bright 
 
 augroup reload_vimrc " {
     autocmd!
