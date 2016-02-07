@@ -61,9 +61,7 @@ export LC_CTYPE=ja_JP.UTF-8
 export LC_ALL=ja_JP.UTF-8
 export PAGER=less
 export PROMPT="%m:%n%% "
-export RPROMPT="[%~]"
 export SPROMPT="correct: %R -> %r ? "
-export PS1='[\h]\w $ '
 export EDITOR="vi"
 # lsのカラー化
 #
