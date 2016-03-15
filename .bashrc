@@ -10,7 +10,7 @@ if [[ `uname` == 'Darwin' ]]; then
 
     export GOROOT=/usr/local/go
     export GOPATH=$HOME/work/goworkspace
-    export PATH=$GOPATH/bin:$PATH
+    export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:$GOPATH/bin:$PATH
     . `brew --prefix`/etc/profile.d/z.sh
 elif [[ `uname` == 'Linux' ]]; then
     alias composer="hhvm -v ResourceLimit.SocketDefaultTimeout=30 -v Http.SlowQueryThreshold=30000 /usr/local/bin/composer"

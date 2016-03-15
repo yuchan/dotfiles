@@ -5,7 +5,7 @@ export ZSH=$HOME/dotfiles/oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="philips"
+ZSH_THEME="simple"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -60,13 +60,10 @@ export LANG=ja_JP.UTF-8
 export LC_CTYPE=ja_JP.UTF-8
 export LC_ALL=ja_JP.UTF-8
 export PAGER=less
-export PROMPT="%m:%n%% "
-export SPROMPT="correct: %R -> %r ? "
 export EDITOR="vi"
 # lsのカラー化
-#
-#LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35'
-#export LS_COLORS
+# LS_COLORS='di=1:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:mi=0:ex=35'
+# export LS_COLORS
 # Tell ls to be colourful
 export CLICOLOR=1
 export LSCOLORS=cxfxexdxbxegedabagacad
@@ -91,20 +88,20 @@ fi
 
 if [ $TERM == xterm ]
 then
-	export TERM=xterm-color
+    export TERM=xterm-color
 fi
 
 function pv() {
-	[ -n "$1" ] && perl -e "use $1;print qq|$1: \$$1::VERSION\n|;";
+    [ -n "$1" ] && perl -e "use $1;print qq|$1: \$$1::VERSION\n|;";
 }
 
 function pm() {
-	[ -n "$1" ] && perldoc -m $1
+    [ -n "$1" ] && perldoc -m $1
 }
 
 if [ ! -d "${HOME}/.vim/bundle" ]; then
-	echo "install neobundle."
-	which git && curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+    echo "install neobundle."
+    which git && curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 fi
 
 export PATH="$HOME/.plenv/bin:$PATH"
@@ -153,18 +150,18 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 
 function powerline_precmd() {
-	PS1="$($HOME/dotfiles/powerline-shell/powerline-shell.py $? --shell zsh 2> /dev/null)"
+    PS1="$($HOME/dotfiles/powerline-shell/powerline-shell.py $? --shell zsh 2> /dev/null)"
 }
 
 function install_powerline_precmd() {
-	for s in "${precmd_functions[@]}"; do
-		if [ "$s" = "powerline_precmd" ]; then
-			return
-		fi
-	done
-	precmd_functions+=(powerline_precmd)
+    for s in "${precmd_functions[@]}"; do
+        if [ "$s" = "powerline_precmd" ]; then
+            return
+        fi
+    done
+    precmd_functions+=(powerline_precmd)
 }
 
 if [ "$TERM" != "linux" ]; then
-	install_powerline_precmd
+    install_powerline_precmd
 fi
