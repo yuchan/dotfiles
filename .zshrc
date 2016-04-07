@@ -165,3 +165,5 @@ function install_powerline_precmd() {
 if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
+
+[[ -s "/Users/yusuke.a.ohashi/.gvm/scripts/gvm" ]] && source "/Users/yusuke.a.ohashi/.gvm/scripts/gvm"
