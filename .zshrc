@@ -145,9 +145,7 @@ export PATH=$COCOS_CONSOLE_ROOT:$PATH
 export COCOS_TEMPLATES_ROOT=/Users/Yusuke/Documents/cocos2d-x-3.7.1/templates
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH
 
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
 
 function powerline_precmd() {
     PS1="$($HOME/dotfiles/powerline-shell/powerline-shell.py $? --shell zsh 2> /dev/null)"
@@ -166,4 +164,4 @@ if [ "$TERM" != "linux" ]; then
     install_powerline_precmd
 fi
 
-[[ -s "/Users/yusuke.a.ohashi/.gvm/scripts/gvm" ]] && source "/Users/yusuke.a.ohashi/.gvm/scripts/gvm"
+[[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
