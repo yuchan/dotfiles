@@ -167,5 +167,5 @@ fi
 [[ -s "${HOME}/.gvm/scripts/gvm" ]] && source "${HOME}/.gvm/scripts/gvm"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/yusuke.a.ohashi/.sdkman"
-[[ -s "/Users/yusuke.a.ohashi/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/yusuke.a.ohashi/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="${HOME}/.sdkman"
+[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
