@@ -4,7 +4,6 @@ if [[ `uname` == 'Darwin' ]]; then
     export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
     alias brew-upgrade-outdated="brew update && brew outdated | awk '{print $1}' | xargs brew upgrade"
     export PATH=/usr/texbin:$PATH
-    eval "$(docker-machine env default)"
     # added by travis gem
     [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
