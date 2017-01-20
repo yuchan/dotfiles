@@ -44,3 +44,4 @@ if [[ -f ~/.bash_secret ]]; then
 fi
 
 alias bex="bundle exec"
+export GHQ_ROOT=$HOME/src
