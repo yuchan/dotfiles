@@ -10,10 +10,7 @@ done
 
 sh laptop/mac 2>&1 | tee ~/laptop.log
 
-if which z >/dev/null; then
-    echo 'z is already installed.'
-else
-    brew install z
+if [ ! -L $HOME/.oh-my-zsh ]
+then
+    ln -s ${PWD}/oh-my-zsh $HOME/.oh-my-zsh
 fi
-
-

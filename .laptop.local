@@ -8,6 +8,8 @@
 brew bundle --file=- <<EOF
 brew "go"
 brew "peco"
+brew "git-extras"
+brew "z"
 EOF
 
 go get github.com/motemen/ghq
