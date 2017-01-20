@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# you should do this before execute this script.
+# curl --remote-name https://raw.githubusercontent.com/thoughtbot/laptop/master/mac
+# less mac
+# sh mac 2>&1 | tee ~/laptop.log
+
+brew bundle --file=- <<EOF
+brew "go"
+brew "peco"
+EOF
+
+go get github.com/motemen/ghq

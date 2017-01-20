@@ -8,14 +8,12 @@ for dotfile in $(find . -maxdepth 1 \( -iname '.*' -not -iname '.git*' -not -ina
     ln -s ${PWD}/${dotfile} ${HOME}/${dotfile}
 done
 
+sh laptop/mac 2>&1 | tee ~/laptop.log
+
 if which z >/dev/null; then
     echo 'z is already installed.'
 else
     brew install z
 fi
 
-currentdir=$PWD
 
-cd $currentdir/powerline-shell && cp config.py.dist config.py && ./install.py
-cd $currentdir/fonts && ./install.sh
-cd $currentdir

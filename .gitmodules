@@ -2,9 +2,6 @@
 	path = oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh
 
-[submodule "powerline-shell"]
-	path = powerline-shell
-	url = https://github.com/milkbikis/powerline-shell.git
-[submodule "fonts"]
-	path = fonts
-	url = https://github.com/powerline/fonts.git
+[submodule "laptop"]
+	path = laptop
+	url = git@github.com:thoughtbot/laptop.git
