@@ -10,6 +10,6 @@ brew "go"
 brew "peco"
 brew "git-extras"
 brew "z"
+brew "ghq"
 EOF
 
-go get github.com/motemen/ghq

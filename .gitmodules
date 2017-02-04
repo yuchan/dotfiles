@@ -4,4 +4,4 @@
 
 [submodule "laptop"]
 	path = laptop
-	url = git@github.com:thoughtbot/laptop.git
+	url = https://github.com/thoughtbot/laptop.git

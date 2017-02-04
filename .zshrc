@@ -48,8 +48,8 @@ ZSH_THEME="simple"
 plugins=(git rvm)
 
 # User configuration
-if [ -f ~/.bashrc ] ; then
-	. ~/.bashrc
+if [ -f ~/.zshrc.local ] ; then
+	. ~/.zshrc.local
 fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -84,3 +84,4 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="$HOME/.bin:$PATH"
 eval "$(rbenv init - --no-rehash)"
+
