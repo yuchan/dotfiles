@@ -15,9 +15,11 @@ then
     ln -s ${PWD}/oh-my-zsh $HOME/.oh-my-zsh
 fi
 
-if [ ! -L /usr/local/bin/subl ]
-then
-    ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+if [[ `uname` == 'Darwin' ]]; then
+    if [ ! -L /usr/local/bin/subl ]
+    then
+        ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+    fi
 fi
 
 
