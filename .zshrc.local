@@ -28,6 +28,8 @@ if [[ `uname` == 'Darwin' ]]; then
     export GOPATH=$HOME/src/go
     export PATH=/Library/Developer/Toolchains/swift-latest.xctoolchain/usr/bin:$GOPATH/bin:$PATH
     . `brew --prefix`/etc/profile.d/z.sh
+    export JAVA_HOME="$(/usr/libexec/java_home)"
+    export PATH=${JAVA_HOME}/bin:$PATH 
 elif [[ `uname` == 'Linux' ]]; then
     alias composer="hhvm -v ResourceLimit.SocketDefaultTimeout=30 -v Http.SlowQueryThreshold=30000 /usr/local/bin/composer"
 fi
