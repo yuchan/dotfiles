@@ -11,5 +11,6 @@ brew "peco"
 brew "git-extras"
 brew "z"
 brew "ghq"
+brew "tig"
 EOF
 
