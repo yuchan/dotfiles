@@ -12,5 +12,27 @@ brew "git-extras"
 brew "z"
 brew "ghq"
 brew "tig"
+brew "yarn"
+brew "mas"
+cask "iterm2"
+cask "spotify"
+cask "google-chrome"
+cask "sublime-text"
+cask "night-owl"
+cask "dropbox"
+cask "spectacle"
+cask "skype"
+cask "sourcetree"
+cask "1password"
+cask "sketch"
+cask "adobe-creative-cloud"
+cask "adobe-creative-cloud-cleaner-tool"
+cask "adobe-photoshop-lightroom"
+cask "omnidisksweeper"
+mas "Xcode", id: 497799835
+mas "Slack", id: 803453959
+mas "LINE", id: 539883307
+mas "Simplenote", id: 692867256
+mas "Alfred", id: 405843582
 EOF
 
