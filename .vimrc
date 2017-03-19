@@ -4,66 +4,67 @@ if has('vim_starting')
 endif
 set runtimepath+=$GOROOT/misc/vim
 
-call neobundle#begin(expand('~/.vim/bundle'))
-" Let NeoBundle manage NeoBundle
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" Recommended to install
-NeoBundle 'Shougo/vimproc', {
-            \ 'build' : {
-            \     'windows' : 'make -f make_mingw32.mak',
-            \     'cygwin' : 'make -f make_cygwin.mak',
-            \     'mac' : 'make -f make_mac.mak',
-            \     'unix' : 'make -f make_unix.mak',
-            \    },
-            \ }
-
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'vim-scripts/dbext.vim'
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'mattn/gist-vim'
-NeoBundle 'tpope/vim-rails', { 'autoload' : {
-            \ 'filetypes' : ['haml', 'ruby', 'eruby'] }}
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle 'chriskempson/vim-tomorrow-theme'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'ujihisa/unite-colorscheme'
-NeoBundle 'google/maktaba'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'ngmy/vim-rubocop'
-NeoBundle 'hsanson/vim-android'
-
-" My Bundles here:
-" Refer to |:NeoBundle-examples|.
-"
-" Note: You don't set neobundle setting in .gvimrc!
-
-" ...
-
-filetype plugin indent on     " Required!
-"
-" Brief help
-" :NeoBundleList          - list configured bundles
-" :NeoBundleInstall(!)    - install(update) bundles
-" :NeoBundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
 
 " Required:
-call neobundle#end()
+set runtimepath+=~/.vim/vein/repos/github.com/Shougo/dein.vim
 
-" Installation check.
-NeoBundleCheck
+" Required:
+if dein#load_state('~/.vim/vein')
+  call dein#begin('~/.vim/vein')
+
+  " Let dein manage dein
+  " Required:
+  call dein#add('~/.vim/vein/repos/github.com/Shougo/dein.vim')
+
+  " Add or remove your plugins here:
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('Shougo/neocomplcache') 
+
+  " You can specify revision/branch/tag.
+  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('kien/ctrlp.vim')
+  call dein#add('flazz/vim-colorschemes')
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('vim-scripts/dbext.vim')
+  call dein#add('mattn/webapi-vim')
+  call dein#add('mattn/gist-vim')
+  call dein#add('tpope/vim-rails', { 'autoload' : {
+            \ 'filetypes' : ['haml', 'ruby', 'eruby'] }})
+  call dein#add('kchmck/vim-coffee-script:')
+  call dein#add('w0ng/vim-hybrid')
+  call dein#add('chriskempson/vim-tomorrow-theme')
+  call dein#add('Shougo/unite.vim')
+  call dein#add('ujihisa/unite-colorscheme')
+  call dein#add('google/maktaba')
+  call dein#add('scrooloose/nerdcommenter')
+  call dein#add('tpope/vim-haml')
+  call dein#add('ngmy/vim-rubocop')
+  call dein#add('hsanson/vim-android')
+
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
 
 if &term =~ "xterm-256color"
     set t_Co=256
-    syntax on
+    syntax enable 
 endif
 
 "" Disable AutoComplPop.
@@ -110,6 +111,7 @@ set autochdir
 
 filetype plugin on
 " colorscheme Tomorrow-Night-Bright 
+colorscheme badwolf
 
 augroup reload_vimrc " {
     autocmd!
