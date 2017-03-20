@@ -15,11 +15,6 @@ export GREP_OPTIONS='--color=auto'
 alias ls='ls -FG'
 alias grep='grep --color=auto'
 
-if [ ! -d "${HOME}/.vim/bundle" ]; then
-     echo "install neobundle."
-     which git && curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
-fi
-
 if [[ `uname` == 'Darwin' ]]; then
     export EDITOR=vim
     alias brew-upgrade-outdated="brew update && brew outdated | awk '{print $1}' | xargs brew upgrade"    

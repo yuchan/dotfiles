@@ -4,63 +4,18 @@ if has('vim_starting')
 endif
 set runtimepath+=$GOROOT/misc/vim
 
-"dein Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
-
-" Required:
-set runtimepath+=~/.vim/vein/repos/github.com/Shougo/dein.vim
-
-" Required:
-if dein#load_state('~/.vim/vein')
-  call dein#begin('~/.vim/vein')
-
-  " Let dein manage dein
-  " Required:
-  call dein#add('~/.vim/vein/repos/github.com/Shougo/dein.vim')
-
-  " Add or remove your plugins here:
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('Shougo/neocomplcache') 
-
-  " You can specify revision/branch/tag.
-  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
-
-  call dein#add('tpope/vim-fugitive')
-  call dein#add('kien/ctrlp.vim')
-  call dein#add('flazz/vim-colorschemes')
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('vim-scripts/dbext.vim')
-  call dein#add('mattn/webapi-vim')
-  call dein#add('mattn/gist-vim')
-  call dein#add('tpope/vim-rails', { 'autoload' : {
-            \ 'filetypes' : ['haml', 'ruby', 'eruby'] }})
-  call dein#add('kchmck/vim-coffee-script:')
-  call dein#add('w0ng/vim-hybrid')
-  call dein#add('chriskempson/vim-tomorrow-theme')
-  call dein#add('Shougo/unite.vim')
-  call dein#add('ujihisa/unite-colorscheme')
-  call dein#add('google/maktaba')
-  call dein#add('scrooloose/nerdcommenter')
-  call dein#add('tpope/vim-haml')
-  call dein#add('ngmy/vim-rubocop')
-  call dein#add('hsanson/vim-android')
-
-  " Required:
-  call dein#end()
-  call dein#save_state()
-endif
+" Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
+call plug#begin('~/.vim/plugged')
+Plug 'flazz/vim-colorschemes'
+Plug 'flowtype/vim-flow', {'autoload':{'filetypes':['javascript']}}
+Plug 'Valloric/YouCompleteMe'
+Plug 'othree/yajs.vim', {'autoload':{'filetypes':['javascript']}}
+" Initialize plugin system
+call plug#end()
 
 " Required:
 filetype plugin indent on
 syntax enable
-
-" If you want to install not installed plugins on startup.
-"if dein#check_install()
-"  call dein#install()
-"endif
 
 if &term =~ "xterm-256color"
     set t_Co=256
@@ -109,8 +64,6 @@ set ignorecase
 set smartcase
 set autochdir
 
-filetype plugin on
-" colorscheme Tomorrow-Night-Bright 
 colorscheme badwolf
 
 augroup reload_vimrc " {
