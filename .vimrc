@@ -10,6 +10,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'flowtype/vim-flow', {'autoload':{'filetypes':['javascript']}}
 Plug 'Valloric/YouCompleteMe'
 Plug 'othree/yajs.vim', {'autoload':{'filetypes':['javascript']}}
+Plug 'pangloss/vim-javascript'
 " Initialize plugin system
 call plug#end()
 
