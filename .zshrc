@@ -90,3 +90,4 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
+if which yarn > /dev/null; then export PATH=$(yarn global bin):$PATH; fi
