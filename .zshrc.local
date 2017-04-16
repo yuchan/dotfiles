@@ -35,4 +35,4 @@ export GHQ_ROOT=$HOME/src
 # recommended by brew doctor
 export PATH="/usr/local/bin:$PATH"
 
-eval $(docker-machine env dev)
+eval $(docker-machine env)
