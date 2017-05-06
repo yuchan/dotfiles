@@ -11,6 +11,9 @@ Plug 'flowtype/vim-flow', {'autoload':{'filetypes':['javascript']}}
 Plug 'Valloric/YouCompleteMe'
 Plug 'othree/yajs.vim', {'autoload':{'filetypes':['javascript']}}
 Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-surround'
+Plug 'ctrlpvim/ctrlp.vim'
 " Initialize plugin system
 call plug#end()
 

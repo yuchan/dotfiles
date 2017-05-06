@@ -8,7 +8,9 @@ for dotfile in $(find . -maxdepth 1 \( -iname '.*' -not -iname '.git*' -not -ina
     ln -s ${PWD}/${dotfile} ${HOME}/${dotfile}
 done
 
-sh laptop/mac 2>&1 | tee ~/laptop.log
+if [[ `uname` == 'Darwin' ]]; then
+    sh laptop/mac 2>&1 | tee ~/laptop.log
+fi
 
 if [ ! -L $HOME/.oh-my-zsh ]
 then
