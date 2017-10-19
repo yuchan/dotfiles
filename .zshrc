@@ -82,11 +82,15 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+if which yarn > /dev/null; then export PATH=$(yarn global bin):$PATH; fi
+
 export PATH="$HOME/.bin:$PATH"
-eval "$(rbenv init - --no-rehash)"
+eval "$(rbenv init -)"
 
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
-if which yarn > /dev/null; then export PATH=$(yarn global bin):$PATH; fi
+
+
