@@ -33,10 +33,6 @@ cask "adobe-creative-cloud"
 cask "adobe-creative-cloud-cleaner-tool"
 cask "adobe-photoshop-lightroom"
 cask "omnidisksweeper"
-mas "Xcode", id: 497799835
-mas "Slack", id: 803453959
-mas "LINE", id: 539883307
-mas "Simplenote", id: 692867256
 EOF
 
 append_to_zshrc 'export PYENV_ROOT="$HOME/.pyenv"' 1

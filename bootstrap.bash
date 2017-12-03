@@ -12,11 +12,11 @@ if [[ `uname` == 'Darwin' ]]; then
     sh laptop/mac 2>&1 | tee ~/laptop.log
 fi
 
+npm install --global pure-prompt
+
 if [ ! -L $HOME/.oh-my-zsh ]
 then
     ln -s ${PWD}/oh-my-zsh $HOME/.oh-my-zsh
 fi
-
-npm install --global pure-prompt
 
 source ~/.zshrc

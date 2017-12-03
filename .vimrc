@@ -68,7 +68,7 @@ set ignorecase
 set smartcase
 set autochdir
 
-colorscheme badwolf
+" colorscheme badwolf
 
 augroup reload_vimrc " {
     autocmd!

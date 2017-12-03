@@ -35,3 +35,5 @@ export GHQ_ROOT=$HOME/src
 # recommended by brew doctor
 export PATH="/usr/local/bin:$PATH"
 
+export PATH="$HOME/.bin:$PATH"
+source /Users/yusuke/.asdf/asdf.sh
