@@ -29,11 +29,3 @@ elif [[ `uname` == 'Linux' ]]; then
     alias composer="hhvm -v ResourceLimit.SocketDefaultTimeout=30 -v Http.SlowQueryThreshold=30000 /usr/local/bin/composer"
 fi
 
-alias bex="bundle exec"
-export GHQ_ROOT=$HOME/src
-
-# recommended by brew doctor
-export PATH="/usr/local/bin:$PATH"
-
-export PATH="$HOME/.bin:$PATH"
-source /Users/yusuke/.asdf/asdf.sh

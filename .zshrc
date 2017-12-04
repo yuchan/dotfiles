@@ -86,15 +86,13 @@ prompt pure
 
 if which yarn > /dev/null; then export PATH=$(yarn global bin):$PATH; fi
 
+alias bex="bundle exec"
+export GHQ_ROOT=$HOME/src
+
+# recommended by brew doctor
+export PATH="/usr/local/bin:$PATH"
+
 export PATH="$HOME/.bin:$PATH"
-eval "$(rbenv init -)"
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-
-eval "$(pyenv init -)"
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
