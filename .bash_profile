@@ -44,7 +44,11 @@ export PROMPT="%m:%n%% "
 export RPROMPT="[%~]"
 export SPROMPT="correct: %R -> %r ? "
 export PS1='[\h]\w $ '
+<<<<<<< HEAD
 
 if [ -f ~/.bashrc ] ; then
     . ~/.bashrc
 fi
+=======
+export PATH="$HOME/.cargo/bin:$PATH"
+>>>>>>> update

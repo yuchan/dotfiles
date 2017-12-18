@@ -4,4 +4,7 @@ npm-debug.log
 .atom/gist-it.token
 junk
 .zshrc.local
+<<<<<<< HEAD
 .bashrc
+=======
+>>>>>>> update

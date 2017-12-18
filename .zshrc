@@ -22,7 +22,7 @@ ZSH_THEME=""
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -83,11 +83,6 @@ source $ZSH/oh-my-zsh.sh
 
 autoload -U promptinit; promptinit
 prompt pure
-
-if which yarn > /dev/null; then export PATH=$(yarn global bin):$PATH; fi
-
-alias bex="bundle exec"
-export GHQ_ROOT=$HOME/src
 
 # recommended by brew doctor
 export PATH="/usr/local/bin:$PATH"
