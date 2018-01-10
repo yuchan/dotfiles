@@ -122,3 +122,5 @@ if [[ `uname` == 'Darwin' ]]; then
 elif [[ `uname` == 'Linux' ]]; then
     alias composer="hhvm -v ResourceLimit.SocketDefaultTimeout=30 -v Http.SlowQueryThreshold=30000 /usr/local/bin/composer"
 fi
+
+source /Users/yusuke.a.ohashi/.asdf/asdf.sh
