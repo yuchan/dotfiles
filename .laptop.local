@@ -27,5 +27,6 @@ cask "skype"
 cask "sourcetree"
 cask "1password"
 cask "omnidisksweeper"
+cask "appcleaner"
 EOF
 
