@@ -25,11 +25,8 @@ cask "dropbox"
 cask "spectacle"
 cask "skype"
 cask "sourcetree"
-cask "visual-studio-code"
 cask "1password"
-cask "adobe-creative-cloud"
-cask "adobe-creative-cloud-cleaner-tool"
-cask "adobe-photoshop-lightroom"
 cask "omnidisksweeper"
+cask "appcleaner"
 EOF
 
