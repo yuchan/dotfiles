@@ -48,3 +48,5 @@ export PS1='[\h]\w $ '
 if [ -f ~/.bashrc ] ; then
     . ~/.bashrc
 fi
+
+export PATH="$HOME/.cargo/bin:$PATH"
